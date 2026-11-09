@@ -28,3 +28,12 @@ npx remotion render DesignPreview out/design-preview.mp4
 ```
 
 `MyComp` bleibt unverändert. Im Ausgangsstand auf `main` ist keine `CartoonDemo` registriert oder als Datei vorhanden.
+
+## Validierung dieser Umsetzung
+
+- `npm run lint`: ESLint und TypeScript erfolgreich.
+- Prettier und `git diff --check`: erfolgreich.
+- Remotion meldet `DesignPreview` mit 900 Frames, 30 FPS und 1920 × 1080; `MyComp` unverändert vorhanden.
+- Vollständiger H.264-Render erfolgreich: `out/design-preview.mp4` (900 Frames, 30 Sekunden, ohne Audiospur).
+- Standbilder bei Frames 250, 555 und 840 gerendert und visuell auf Lesbarkeit, Layout und vollständige Inhalte geprüft.
+- Für diesen Cloud-Rechner wurde bei Render und Standbildern `--browser-executable=/usr/bin/chromium` verwendet.

@@ -308,7 +308,7 @@ const Chapter: React.FC = () => (
 
 export const DesignPreview: React.FC<PreviewProps> = ({ Character }) => (
   <AbsoluteFill style={typography}>
-    <Sequence  durationInFrames={300}>
+    <Sequence durationInFrames={300}>
       <Office Character={Character} />
     </Sequence>
     <Sequence from={300} durationInFrames={300}>
