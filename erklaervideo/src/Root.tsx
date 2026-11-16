@@ -1,3 +1,5 @@
+import { HeinrichOfficePreview } from "./HeinrichOfficePreview";
+import { OFFICE } from "./HeinrichOfficePreview/motion";
 import { HeinrichExteriorIntro } from "./HeinrichExteriorIntro";
 import { INTRO } from "./HeinrichExteriorIntro/motion";
 import { Composition } from "remotion";
@@ -8,6 +10,11 @@ export const RemotionRoot: React.FC = () => {
   return (
     <>
       <MyComposition />
+      <Composition
+        id="HeinrichOfficePreview"
+        component={HeinrichOfficePreview}
+        {...OFFICE}
+      />
       <Composition
         id="HeinrichExteriorIntro"
         component={HeinrichExteriorIntro}
